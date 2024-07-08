@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   motion,
   useScroll,
@@ -13,23 +13,7 @@ import { Flip } from "../Flip";
 import { LinkedInLogoIcon } from "@radix-ui/react-icons";
 import {EnvelopeClosedIcon, GitHubLogoIcon, RocketIcon} from "@radix-ui/react-icons";                                                      
 
-
-export const HeroParallax = ({
-  products,
-}: {
-  products: {
-    type: string,
-    title: string;
-    link: string;
-    linkedin: string;
-    github: string;
-    thumbnail: string;
-    portfolio: string;
-  }[];
-}) => {
-  const firstRow = products.slice(0, 5);
-  const secondRow = products.slice(5, 10);
-  const thirdRow = products.slice(10, 15);
+function useParallaxAnimations() {
   const ref = React.useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -62,6 +46,47 @@ export const HeroParallax = ({
     useTransform(scrollYProgress, [0, 0.2], [-700, 500]),
     springConfig
   );
+
+  return { ref, translateX, translateXReverse, rotateX, opacity, rotateZ, translateY };
+}
+
+// Custom hook for window width
+function useWindowWidth() {
+  const [windowWidth, setWindowWidth] = useState(0);
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowWidth(windowWidth);
+    }
+    
+    // Set initial width
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  return windowWidth;
+}
+
+export const HeroParallax = ({
+  products,
+}: {
+  products: {
+    type: string,
+    title: string;
+    link: string;
+    linkedin: string;
+    github: string;
+    thumbnail: string;
+    portfolio: string;
+  }[];
+}) => {
+    const { ref, translateX, translateXReverse, rotateX, opacity, rotateZ, translateY } = useParallaxAnimations();
+  const firstRow = products.slice(0, 5);
+  const secondRow = products.slice(5, 10);
+  const thirdRow = products.slice(10, 15);
+  
   return (
     <div
       ref={ref}
@@ -142,6 +167,7 @@ export const ProductCard = ({
   };
   translate: MotionValue<number>;
 }) => {
+const windowWidth = useWindowWidth();
   return (
     <motion.div
       style={{
@@ -151,7 +177,7 @@ export const ProductCard = ({
         y: -20,
       }}
       key={product.title}
-      className={`group/product    ${window.innerWidth > 600 ? 'relative flex-shrink-0 hover:scale-125 h-72 w-[20rem]' : 'relative flex-shrink-0 h-32 w-32'}`}
+      className={`group/product    ${windowWidth > 600 ? 'relative flex-shrink-0 hover:scale-125 h-72 w-[20rem]' : 'relative flex-shrink-0 h-32 w-32'}`}
     >
       {/* <Link
         href={product.link}
@@ -166,24 +192,24 @@ export const ProductCard = ({
         />
       {/* </Link> */}
       <div className="cardGradient absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none"></div>
-      <h2 className = {`absolute  left-5 opacity-0 opacity-100 text-white text-2xl  ${window.innerWidth > 600 ? 'bottom-12 text-bold' : 'bottom-6 text-xs'}`}>
+      <h2 className = {`absolute  left-5 opacity-0 opacity-100 text-white text-2xl  ${windowWidth > 600 ? 'bottom-12 text-bold' : 'bottom-6 text-xs'}`}>
         {product.title}
       </h2>
       {/* {product.mail &&<a href={product.mail} target="_blank" rel="noopener noreferrer">
-      <EnvelopeClosedIcon className={ `absolute bottom-4 right-10 opacity-0 opacity-100 text-white ${window.innerWidth > 600 ? 'w-6 h-6 ' : ''}`} />
+      <EnvelopeClosedIcon className={ `absolute bottom-4 right-10 opacity-0 opacity-100 text-white ${windowWidth > 600 ? 'w-6 h-6 ' : ''}`} />
 </a>} */}
-<div className={`absolute  flex left-5 justify-items-start  ${window.innerWidth > 600 ? 'bottom-4 space-x-4' : 'bottom-2 space-x-2'} `}>
+<div className={`absolute  flex left-5 justify-items-start  ${windowWidth > 600 ? 'bottom-4 space-x-4' : 'bottom-2 space-x-2'} `}>
       { product.linkedin && <a href={product.linkedin} target="_blank" rel="noopener noreferrer">
-  <LinkedInLogoIcon className={ `right-4 opacity-0 opacity-100 text-white  ${window.innerWidth > 600 ? 'w-6 h-6 ' : ''}`} />
+  <LinkedInLogoIcon className={ `right-4 opacity-0 opacity-100 text-white  ${windowWidth > 600 ? 'w-6 h-6 ' : ''}`} />
 </a>}
       { product.github && <a href={product.github} target="_blank" rel="noopener noreferrer">
-  <GitHubLogoIcon className={ `flex justify opacity-0 opacity-100 text-white  ${window.innerWidth > 600 ? 'w-6 h-6 ' : ''}`} />
+  <GitHubLogoIcon className={ `flex justify opacity-0 opacity-100 text-white  ${windowWidth > 600 ? 'w-6 h-6 ' : ''}`} />
 </a>}
       { product.portfolio && <a href={product.portfolio} target="_blank" rel="noopener noreferrer">
-  <RocketIcon className={ `flex justify opacity-0 opacity-100 text-white  ${window.innerWidth > 600 ? 'w-6 h-6 ' : ''}`} />
+  <RocketIcon className={ `flex justify opacity-0 opacity-100 text-white  ${windowWidth > 600 ? 'w-6 h-6 ' : ''}`} />
 </a>}
       { product.link && <a href={product.link} target="_blank" rel="noopener noreferrer">
-  <RocketIcon className={ `flex justify opacity-0 opacity-100 text-white  ${window.innerWidth > 600 ? 'w-6 h-6 ' : ''}`} />
+  <RocketIcon className={ `flex justify opacity-0 opacity-100 text-white  ${windowWidth > 600 ? 'w-6 h-6 ' : ''}`} />
 </a>}
 </div>
     </motion.div>
