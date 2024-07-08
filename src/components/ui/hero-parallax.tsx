@@ -192,8 +192,8 @@ const windowWidth = useWindowWidth();
           alt={product.title}
         />
       {/* </Link> */}
-      <div className="cardGradient absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none"></div>
-      <h2 className = {`absolute  left-5 opacity-0 opacity-100 text-white text-2xl  ${windowWidth > 600 ? 'bottom-12 text-bold' : 'bottom-6 text-xs'}`}>
+      <div className="cardGradient absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none "></div>
+      <h2 className = {`absolute font-semibold left-5 opacity-0 opacity-100 text-white text-2xl  ${windowWidth > 600 ? 'bottom-12 text-bold' : 'bottom-6 text-xs'}`}>
         {product.title}
       </h2>
       {/* {product.mail &&<a href={product.mail} target="_blank" rel="noopener noreferrer">
