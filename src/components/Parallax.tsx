@@ -15,7 +15,7 @@ export const products = [
       "https://aceternity.com/images/products/thumbnails/new/moonbeam.png",
   },
   {
-    type: "website",
+    type: "profile",
     title: "NITAPlacementConnect",
     link: "https://nita-placement-connect.vercel.app/",
     thumbnail:
@@ -37,11 +37,11 @@ export const products = [
       "https://media.licdn.com/dms/image/D4D03AQFu7Blgr4MeTg/profile-displayphoto-shrink_800_800/0/1711030949439?e=1726099200&v=beta&t=VwPqjP_DcPwkk_yjYINxcQ_jeg9khZ6PyiFOfg3xvAg",
   },
   {
-    type: "profile",
-    title: "Ankit Patnaik",
-    link: "https://www.linkedin.com/in/ankit-patnaik/",
+    type: "website",
+    title: "SmartBridge",
+    link: "https://smartbridgetech.com",
     thumbnail:
-      "https://media.licdn.com/dms/image/D4D35AQHDUYBPZzUXqA/profile-framedphoto-shrink_800_800/0/1689437210417?e=1720998000&v=beta&t=3xWyQMzVYsoCvFYZa-RgYLVHDQB_b_eDR1xUQzGPnVM",
+      "https://aceternity.com/images/products/thumbnails/new/smartbridge.png",
   },
   {
     type: "website",
@@ -73,12 +73,13 @@ export const products = [
       "https://media.licdn.com/dms/image/D5603AQGxNLlQL5G5uQ/profile-displayphoto-shrink_400_400/0/1713888600488?e=1726099200&v=beta&t=k0fIDgwrPCBAe-ng4rf883tgDBR2F-uLGhMbtP9uG3I",
   },
   {
-    type: "website",
-    title: "SmartBridge",
-    link: "https://smartbridgetech.com",
+    type: "profile",
+    title: "Ankit Patnaik",
+    link: "https://www.linkedin.com/in/ankit-patnaik/",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/smartbridge.png",
+      "https://media.licdn.com/dms/image/D4D35AQHDUYBPZzUXqA/profile-framedphoto-shrink_800_800/0/1689437210417?e=1720998000&v=beta&t=3xWyQMzVYsoCvFYZa-RgYLVHDQB_b_eDR1xUQzGPnVM",
   },
+  
   {
     type: "website",
     title: "Renderwork Studio",

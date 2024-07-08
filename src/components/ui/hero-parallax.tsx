@@ -72,7 +72,7 @@ export const HeroParallax = ({
         }}
         className=""
       >
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20">
+        <motion.div className="flex flex-row-reverse space-x-reverse space-x-10 mb-20">
           {firstRow.map((product) => (
             <ProductCard
               product={product}
@@ -81,7 +81,7 @@ export const HeroParallax = ({
             />
           ))}
         </motion.div>
-        <motion.div className="flex flex-row  mb-20 space-x-20 ">
+        <motion.div className="flex flex-row  mb-20 space-x-10 ">
           {secondRow.map((product) => (
             <ProductCard
               product={product}
@@ -90,7 +90,7 @@ export const HeroParallax = ({
             />
           ))}
         </motion.div>
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-20">
+        <motion.div className="flex flex-row-reverse space-x-reverse space-x-10">
           {thirdRow.map((product) => (
             <ProductCard
               product={product}
@@ -141,7 +141,7 @@ export const ProductCard = ({
         y: -20,
       }}
       key={product.title}
-      className="group/product h-72 w-[20rem] relative flex-shrink-0"
+      className={`group/product    ${window.innerWidth > 600 ? 'relative flex-shrink-0 hover:scale-125 h-72 w-[20rem]' : 'relative flex-shrink-0 h-32 w-32'}`}
     >
       <Link
         href={product.link}
@@ -156,7 +156,7 @@ export const ProductCard = ({
         />
       </Link>
       <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none"></div>
-      <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-white">
+      <h2 className = {`absolute bottom-4 left-4 opacity-0 opacity-100 text-white ${window.innerWidth > 600 ? '' : 'text-xs'}`}>
         {product.title}
       </h2>
     </motion.div>
