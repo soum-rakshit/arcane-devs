@@ -52,22 +52,23 @@ function useParallaxAnimations() {
 
 // Custom hook for window width
 function useWindowWidth() {
-  const [windowWidth, setWindowWidth] = useState(0);
-
-  useEffect(() => {
-    function handleResize() {
-      setWindowWidth(windowWidth);
-    }
-    
-    // Set initial width
-    handleResize();
-
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  return windowWidth;
-}
+    const [windowWidth, setWindowWidth] = useState(0);
+  
+    useEffect(() => {
+      function handleResize() {
+        setWindowWidth(window.innerWidth);  // Use window.innerWidth, not windowWidth
+      }
+      
+      // Set initial width
+      handleResize();
+  
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }, []); // Remove windowWidth from the dependency array
+  
+    console.log(windowWidth);
+    return windowWidth;
+  }
 
 export const HeroParallax = ({
   products,
