@@ -135,7 +135,10 @@ export const ProductCard = ({
     link: string;
     linkedin: string;
     thumbnail: string;
-    mail: string;
+    github: string;
+    portfolio: string;
+    type: string;
+    
   };
   translate: MotionValue<number>;
 }) => {
