@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -26,4 +27,7 @@ background: linear-gradient(122deg, rgba(40,0,56,1) 38%, rgba(95,0,102,1) 100%);
     text-wrap: balance;
   }
 }
+
+
+
 

@@ -6,9 +6,9 @@ export function Flip() {
 
   return (
     <div className="h-[10rem]  p-[3rem]">
-      <div className={`mx-auto font-semibold text-white -left-3${window.innerWidth > 600 ? 'pt-40 pl-[5rem] py-3 text-8xl' : 'py-2 text-5xl top-5 pt-4'}`}>
+      <div className={`mx-auto font-semibold text-white  ${window.innerWidth > 600 ? 'pt-40 pl-[5rem] py-3 text-8xl' : 'py-2 text-5xl top-5 pt-4'}`}>
   Meet {window.innerWidth < 600 && <br />}
-  <FlipWords words={words} className="text-orange-500 py-3" />
+  <FlipWords words={words} className={`text-orange-500 py-3 ${window.innerWidth > 600 ? '' : '-left-3'}`} />
  
   <div className="text-xl">
   The team behind{' '}

@@ -24,17 +24,22 @@ export const products = [
   {
   type: "profile",
     title: "Dhruv Rohatgi",
-    link: "https://www.linkedin.com/in/dhruvrohatgi28/",
+    linkedin: "https://www.linkedin.com/in/dhruvrohatgi28/",
     thumbnail:
       "https://media.licdn.com/dms/image/D5603AQFBsGawUE3ZzA/profile-displayphoto-shrink_800_800/0/1693196895781?e=1726099200&v=beta&t=YYdPO8_kU6OnMovGoHR_vIFy7gVZx3FCl9Cbc5ZZBro",
+    mail: "mailto:dhruv@gmail.com",
+    github: "https://github.com/soum-rakshit",
   },
 
   {
     type: "profile",
     title: "Aditya Kanu",
-    link: "https://www.linkedin.com/in/adityakanu/",
+    linkedin: "https://www.linkedin.com/in/adityakanu/",
     thumbnail:
       "https://media.licdn.com/dms/image/D4D03AQFu7Blgr4MeTg/profile-displayphoto-shrink_800_800/0/1711030949439?e=1726099200&v=beta&t=VwPqjP_DcPwkk_yjYINxcQ_jeg9khZ6PyiFOfg3xvAg",
+      mail: "mailto:aditya@gmail.com",
+      github: "https://github.com/soum-rakshit",
+      portfolio: "https://www.adityakanu.com",
   },
   {
     type: "website",
@@ -61,23 +66,29 @@ export const products = [
   {
     type: "website",
     title: "Soumyajit Das",
-    link: "https://www.linkedin.com/in/soumyajit-das-cse/",
+    linkedin: "https://www.linkedin.com/in/soumyajit-das-cse/",
     thumbnail:
       "https://media.licdn.com/dms/image/C4E03AQEO9e9KytWVdw/profile-displayphoto-shrink_800_800/0/1647408006963?e=1726099200&v=beta&t=vgEi6JvOlJPhBocGBCNXT2siJ0lIZGSfk_h0S34VodM",
+    mail: "mailto:soumyajit@gmail.com",
+    github: "https://github.com/soum-rakshit",
   },
   {
     type: "website",
     title: "Soumyadeep Rakshit",
-    link: "https://www.linkedin.com/in/soumrakshit/",
+    linkedin: "https://www.linkedin.com/in/soumrakshit/",
     thumbnail:
       "https://media.licdn.com/dms/image/D5603AQGxNLlQL5G5uQ/profile-displayphoto-shrink_400_400/0/1713888600488?e=1726099200&v=beta&t=k0fIDgwrPCBAe-ng4rf883tgDBR2F-uLGhMbtP9uG3I",
+    mail: "mailto:rakshit@gmail.com",
+    github: "https://github.com/soum-rakshit",
   },
   {
     type: "profile",
     title: "Ankit Patnaik",
-    link: "https://www.linkedin.com/in/ankit-patnaik/",
+    linkedin: "https://www.linkedin.com/in/ankit-patnaik/",
     thumbnail:
       "https://media.licdn.com/dms/image/D4D35AQHDUYBPZzUXqA/profile-framedphoto-shrink_800_800/0/1689437210417?e=1720998000&v=beta&t=3xWyQMzVYsoCvFYZa-RgYLVHDQB_b_eDR1xUQzGPnVM",
+    mail: "mailto:patnaik@gmail.com",
+    github: "https://github.com/soum-rakshit",
   },
   
   {

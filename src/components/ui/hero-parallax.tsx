@@ -10,6 +10,8 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { Flip } from "../Flip";
+import { LinkedInLogoIcon } from "@radix-ui/react-icons";
+import {EnvelopeClosedIcon, GitHubLogoIcon, RocketIcon} from "@radix-ui/react-icons";                                                      
 
 
 export const HeroParallax = ({
@@ -19,7 +21,10 @@ export const HeroParallax = ({
     type: string,
     title: string;
     link: string;
+    linkedin: string;
+    github: string;
     thumbnail: string;
+    portfolio: string;
   }[];
 }) => {
   const firstRow = products.slice(0, 5);
@@ -128,7 +133,9 @@ export const ProductCard = ({
   product: {
     title: string;
     link: string;
+    linkedin: string;
     thumbnail: string;
+    mail: string;
   };
   translate: MotionValue<number>;
 }) => {
@@ -143,10 +150,10 @@ export const ProductCard = ({
       key={product.title}
       className={`group/product    ${window.innerWidth > 600 ? 'relative flex-shrink-0 hover:scale-125 h-72 w-[20rem]' : 'relative flex-shrink-0 h-32 w-32'}`}
     >
-      <Link
+      {/* <Link
         href={product.link}
         className="block group-hover/product:shadow-2xl "
-      >
+      > */}
         <Image
           src={product.thumbnail}
           height="200"
@@ -154,11 +161,28 @@ export const ProductCard = ({
           className="object-cover object-left-top absolute h-full w-full inset-0"
           alt={product.title}
         />
-      </Link>
-      <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none"></div>
-      <h2 className = {`absolute bottom-4 left-4 opacity-0 opacity-100 text-white ${window.innerWidth > 600 ? '' : 'text-xs'}`}>
+      {/* </Link> */}
+      <div className="cardGradient absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none"></div>
+      <h2 className = {`absolute  left-5 opacity-0 opacity-100 text-white text-2xl  ${window.innerWidth > 600 ? 'bottom-12 text-bold' : 'bottom-6 text-xs'}`}>
         {product.title}
       </h2>
+      {/* {product.mail &&<a href={product.mail} target="_blank" rel="noopener noreferrer">
+      <EnvelopeClosedIcon className={ `absolute bottom-4 right-10 opacity-0 opacity-100 text-white ${window.innerWidth > 600 ? 'w-6 h-6 ' : ''}`} />
+</a>} */}
+<div className={`absolute  flex left-5 justify-items-start  ${window.innerWidth > 600 ? 'bottom-4 space-x-4' : 'bottom-2 space-x-2'} `}>
+      { product.linkedin && <a href={product.linkedin} target="_blank" rel="noopener noreferrer">
+  <LinkedInLogoIcon className={ `right-4 opacity-0 opacity-100 text-white  ${window.innerWidth > 600 ? 'w-6 h-6 ' : ''}`} />
+</a>}
+      { product.github && <a href={product.github} target="_blank" rel="noopener noreferrer">
+  <GitHubLogoIcon className={ `flex justify opacity-0 opacity-100 text-white  ${window.innerWidth > 600 ? 'w-6 h-6 ' : ''}`} />
+</a>}
+      { product.portfolio && <a href={product.portfolio} target="_blank" rel="noopener noreferrer">
+  <RocketIcon className={ `flex justify opacity-0 opacity-100 text-white  ${window.innerWidth > 600 ? 'w-6 h-6 ' : ''}`} />
+</a>}
+      { product.link && <a href={product.link} target="_blank" rel="noopener noreferrer">
+  <RocketIcon className={ `flex justify opacity-0 opacity-100 text-white  ${window.innerWidth > 600 ? 'w-6 h-6 ' : ''}`} />
+</a>}
+</div>
     </motion.div>
   );
 };
