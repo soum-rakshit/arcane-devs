@@ -12,6 +12,7 @@ import Link from "next/link";
 import { Flip } from "../Flip";
 import { LinkedInLogoIcon } from "@radix-ui/react-icons";
 import {EnvelopeClosedIcon, GitHubLogoIcon, RocketIcon} from "@radix-ui/react-icons";                                                      
+import { products } from "../Parallax";
 
 function useParallaxAnimations() {
   const ref = React.useRef(null);
@@ -84,14 +85,14 @@ export const HeroParallax = ({
   }[];
 }) => {
     const { ref, translateX, translateXReverse, rotateX, opacity, rotateZ, translateY } = useParallaxAnimations();
-  const firstRow = products.slice(0, 5);
-  const secondRow = products.slice(5, 10);
+  const firstRow = products.slice(1, 5);
+  const secondRow = products.slice(6, 10);
   const thirdRow = products.slice(10, 15);
   
   return (
     <div
       ref={ref}
-      className="h-[300vh] py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="h-[250vh] py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
       <Header />
       <motion.div
@@ -103,7 +104,7 @@ export const HeroParallax = ({
         }}
         className=""
       >
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-10 mb-20">
+        <motion.div className="flex flex-row-reverse space-x-reverse space-x-10 mb-10">
           {firstRow.map((product) => (
             <ProductCard
               product={product}
@@ -178,7 +179,11 @@ const windowWidth = useWindowWidth();
         y: -20,
       }}
       key={product.title}
-      className={`group/product    ${windowWidth > 600 ? 'relative flex-shrink-0 hover:scale-125 h-72 w-[20rem]' : 'relative flex-shrink-0 h-32 w-32'}`}
+      className={`group/product ${
+    windowWidth > 600 
+      ? `relative flex-shrink-0 hover:scale-125 ${product.type === 'website' ? 'h-72 w-[30rem]' : 'h-72 w-72'}` 
+      : `${product.type === 'website' ? 'relative flex-shrink-0 h-32 w-[15rem]' : 'relative flex-shrink-0 h-30 w-32'}`
+  }`}
     >
       {/* <Link
         href={product.link}

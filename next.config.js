@@ -13,6 +13,6 @@ module.exports = {
 
 module.exports = {
     images: {
-      domains: ['aceternity.com', 'mir-s3-cdn-cf.behance.net','media.licdn.com'],
+      domains: ['aceternity.com', 'mir-s3-cdn-cf.behance.net','media.licdn.com', 'i.postimg.cc'],
     },
   };

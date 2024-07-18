@@ -18,7 +18,7 @@ export const products = [
       portfolio:"",
   },
   {
-    type: "profile",
+    type: "website",
     title: "NITAPlacementConnect",
     link: "https://nita-placement-connect.vercel.app/",
     thumbnail:
@@ -33,9 +33,9 @@ export const products = [
     linkedin: "https://www.linkedin.com/in/dhruvrohatgi28/",
     thumbnail:
       "https://media.licdn.com/dms/image/D5603AQFBsGawUE3ZzA/profile-displayphoto-shrink_800_800/0/1693196895781?e=1726099200&v=beta&t=YYdPO8_kU6OnMovGoHR_vIFy7gVZx3FCl9Cbc5ZZBro",
-      portfolio:"",
+      portfolio:"https://courage003.github.io/Personal-Portfolio/",
       link:"",
-    github: "https://github.com/soum-rakshit",
+    github: "https://github.com/Courage003",
   },
 
   {
@@ -45,15 +45,15 @@ export const products = [
     thumbnail:
       "https://media.licdn.com/dms/image/D4D03AQFu7Blgr4MeTg/profile-displayphoto-shrink_800_800/0/1711030949439?e=1726099200&v=beta&t=VwPqjP_DcPwkk_yjYINxcQ_jeg9khZ6PyiFOfg3xvAg",
       link:"",
-      github: "https://github.com/soum-rakshit",
+      github: "https://github.com/adityakanu",
       portfolio: "https://www.adityakanu.com",
   },
   {
     type: "website",
-    title: "SmartBridge",
-    link: "https://smartbridgetech.com",
+    title: "Velovista",
+    link: "https://velovista.vercel.app",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/smartbridge.png",
+      "https://i.postimg.cc/Fspt1PLj/image-2024-07-18-163836010.png",
       linkedin: "",
       github:"",
       portfolio:"",
@@ -80,17 +80,17 @@ export const products = [
       portfolio:"",
   },
   {
-    type: "website",
+    type: "profile",
     title: "Soumyajit Das",
     linkedin: "https://www.linkedin.com/in/soumyajit-das-cse/",
     thumbnail:
-      "https://media.licdn.com/dms/image/C4E03AQEO9e9KytWVdw/profile-displayphoto-shrink_800_800/0/1647408006963?e=1726099200&v=beta&t=vgEi6JvOlJPhBocGBCNXT2siJ0lIZGSfk_h0S34VodM",
+      "https://i.postimg.cc/6QVnvZzk/Whats-App-Image-2024-07-18-at-5-16-52-PM.jpg",
     link: "",
-    portfolio: "",
-    github: "https://github.com/soum-rakshit",
+    portfolio: "https://github.com/samSoumyajitD",
+    github: "https://github.com/samSoumyajitD",
   },
   {
-    type: "website",
+    type: "profile",
     title: "Soumyadeep Rakshit",
     linkedin: "https://www.linkedin.com/in/soumrakshit/",
     thumbnail:
@@ -104,18 +104,18 @@ export const products = [
     title: "Ankit Patnaik",
     linkedin: "https://www.linkedin.com/in/ankit-patnaik/",
     thumbnail:
-      "https://media.licdn.com/dms/image/D4D35AQHDUYBPZzUXqA/profile-framedphoto-shrink_800_800/0/1689437210417?e=1720998000&v=beta&t=3xWyQMzVYsoCvFYZa-RgYLVHDQB_b_eDR1xUQzGPnVM",
+      "https://i.postimg.cc/L6hQTgBG/Whats-App-Image-2024-07-18-at-5-07-49-PM.jpg",
       link: "",
-      portfolio: "",
-    github: "https://github.com/soum-rakshit",
+      portfolio: "https://ankitpatnaik.vercel.app",
+    github: "https://github.com/patnaikankit",
   },
   
   {
     type: "website",
-    title: "Renderwork Studio",
-    link: "https://renderwork.studio",
+    title: "NITAPlacementConnect",
+    link: "https://nita-placement-connect.vercel.app/",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/renderwork.png",
+      "https://mir-s3-cdn-cf.behance.net/project_modules/1400/3b360d202712531.668b04d6cbcf0.png",
       linkedin: "",
       github:"",
       portfolio:"",
@@ -123,30 +123,30 @@ export const products = [
 
   {
     type: "website",
-    title: "Creme Digital",
-    link: "https://cremedigital.com",
+    title: "Landing Page by rakshit",
+    link: "https://arcane-devs.vercel.app",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/cremedigital.png",
+      "https://i.postimg.cc/NMLjBpk4/image-2024-07-18-170418431.png",
       linkedin: "",
       github:"",
       portfolio:"",
   },
   {
     type: "website",
-    title: "Golden Bells Academy",
-    link: "https://goldenbellsacademy.com",
+    title: "Portfolio Website by Aditya",
+    link: "https://www.adityakanu.com",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/goldenbellsacademy.png",
+      "https://i.postimg.cc/Gmyc74hM/image-2024-07-18-165620687.png",
       linkedin: "",
       github:"",
       portfolio:"",
   },
   {
     type: "website",
-    title: "Invoker Labs",
-    link: "https://invoker.lol",
+    title: "Portfolio Website by Ankit",
+    link: "https://ankitpatnaik.vercel.app",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/invoker.png",
+      "https://i.postimg.cc/hPTf3ZjW/image-2024-07-18-170023783.png",
       linkedin: "",
       github:"",
       portfolio:"",
@@ -156,7 +156,7 @@ export const products = [
     title: "E Free Invoice",
     link: "https://efreeinvoice.com",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/efreeinvoice.png",
+      "https://i.postimg.cc/NMLjBpk4/image-2024-07-18-170418431.png",
       linkedin: "",
       github:"",
       portfolio:"",
