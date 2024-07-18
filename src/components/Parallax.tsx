@@ -51,7 +51,7 @@ export const products = [
   },
   {
     type: "website",
-    title: "NITAPlacementConnect5",
+    title: "NITAPlacementConnect",
     link: "https://nita-placement-connect.vercel.app/",
     thumbnail:
       "https://mir-s3-cdn-cf.behance.net/project_modules/1400/3b360d202712531.668b04d6cbcf0.png",
