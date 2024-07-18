@@ -17,12 +17,13 @@ export const products = [
       github:"",
       portfolio:"",
   },
+  
   {
     type: "website",
-    title: "NITAPlacementConnect",
-    link: "https://nita-placement-connect.vercel.app/",
+    title: "Velovista",
+    link: "https://velovista.vercel.app",
     thumbnail:
-      "https://mir-s3-cdn-cf.behance.net/project_modules/1400/3b360d202712531.668b04d6cbcf0.png",
+      "https://i.postimg.cc/Fspt1PLj/image-2024-07-18-163836010.png",
       linkedin: "",
       github:"",
       portfolio:"",
@@ -50,10 +51,10 @@ export const products = [
   },
   {
     type: "website",
-    title: "Velovista",
-    link: "https://velovista.vercel.app",
+    title: "NITAPlacementConnect5",
+    link: "https://nita-placement-connect.vercel.app/",
     thumbnail:
-      "https://i.postimg.cc/Fspt1PLj/image-2024-07-18-163836010.png",
+      "https://mir-s3-cdn-cf.behance.net/project_modules/1400/3b360d202712531.668b04d6cbcf0.png",
       linkedin: "",
       github:"",
       portfolio:"",
